@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
-import { Button, FormGroup, FormControl } from 'react-bootstrap';
+import { Button, FormGroup, FormControl  } from 'react-bootstrap';
 import { Grid, Row, Col } from 'react-bootstrap';
 import './App.css';
 
 const LINK_REGEX = /\b((?:[a-z][\w-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()[\]{};:'".,<>?«»“”‘’]))/igm
 
-export default class UrlInput extends Component {
+
+export default class UrlInput extends Component{
 
   props: {
-    onPress: () => void,
-  }
+  onPress: () => void,
+}
 
-  state: {
-    inputValue: string,
-    invalidUrl: bool,
-  }
+state: {
+  inputValue: string,
+  invalidUrl: bool,
+}
 
   constructor (props) {
     super(props)
@@ -25,6 +26,7 @@ export default class UrlInput extends Component {
   }
 
   onInputChange = (event) => {
+      console.log( event.target.value)
     this.setState({
       inputValue: event.target.value,
     })
@@ -32,8 +34,8 @@ export default class UrlInput extends Component {
     if (this.state.invalidUrl && this.state.inputValue.match(LINK_REGEX)) {
       this.setState({
         invalidUrl: false,
-      })
-    }
+  })
+}
   }
 
   onPress = () => {
@@ -47,11 +49,15 @@ export default class UrlInput extends Component {
     }
   }
 
+
   renderInvalid () {
+    console.log(this.state.invalidUrl)
     return this.state.invalidUrl ? (
       <div>Invalid Url</div>
     ) : null
   }
+
+
 
   render () {
     return (
@@ -72,8 +78,11 @@ export default class UrlInput extends Component {
             </Button>
           </Col>
         </Row>
-        {this.renderInvalid()}
+          {this.renderInvalid()}
       </Grid>
     )
   }
-}
+
+
+
+};
