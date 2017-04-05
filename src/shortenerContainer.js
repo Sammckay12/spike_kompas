@@ -6,6 +6,8 @@ import Flexbox from 'flexbox-react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import './BasicStyles.css'
 
+const LINK_REGEX = /\b((?:[a-z][\w-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()[\]{};:'".,<>?«»“”‘’]))/igm
+
 
 export default class ShortenerContainer extends Component {
 
@@ -40,34 +42,69 @@ export default class ShortenerContainer extends Component {
     });
   }
 
+  onPress = () => {
+    console.log('on press')
+    if (this.state.inputValue.match(LINK_REGEX)) {
+      this.shortenUrl(this.state.inputValue)
+    } else {
+      this.setState({
+        invalidUrl: true,
+      })
+    }
+  }
 
-  onPress = (url: string) => {
-    this.shortenUrl(url)
+  onInputChange = (event) => {
+    this.setState({
+      inputValue: event.target.value,
+    })
+    if (
+      this.state.invalidUrl &&
+      (event.target.value.match(LINK_REGEX) || !event.target.value.length)
+    ) {
+      this.setState({
+        invalidUrl: false,
+      })
+    }
   }
 
   renderShortenedUrl = () => {
-    return this.state.shortenedUrl ? (
-      <a href={this.state.shortenedUrl} class="shortUrlResponse" url>{this.state.shortenedUrl}</a>
+    return this.state.shortenedUrl && !this.state.invalidUrl ? (
+      <div className="shortenedUrlContainer">
+        <a href={this.state.shortenedUrl} className="shortUrlResponse" url>{this.state.shortenedUrl}</a>
+      </div>
     ) : null
   }
 
+  renderInvalid () {
+    console.log('render invalid: ', this.state.invalidUrl)
+    return this.state.invalidUrl ? (
+      <div className="invalid-message">Invalid Url</div>
+    ) : null
+  }
 
   render() {
     return (
-      <Grid fluid>
-
-          <img src={logo} className="App-logo" alt="logo" />
-          <Row center='xs'>
-            <h2>Spike - url shortener</h2>
-          </Row>
-          <Row center='xs'>
-            <Col xs={9} >
-                <UrlInput onPress={this.onPress} />
+      <div className="top-container">
+        <Grid fluid className="grid">
+            <Row center='xs' className="header">
+              <h2>Spike.ly</h2>
+            </Row>
+            <Row center='xs' className="row1">
+              <Col xs={12} md={12} lg={12} >
+                  <UrlInput
+                    onPress={this.onPress}
+                    onInputChange={this.onInputChange}
+                    invalid={this.state.invalidUrl} />
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12} md={12} lg={12} >
+                {this.renderInvalid()}
                 {this.renderShortenedUrl()}
-            </Col>
-          </Row>
+              </Col>
+            </Row>
         </Grid>
-
+      </div>
     );
   }
 

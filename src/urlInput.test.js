@@ -12,6 +12,4 @@ describe('UrlInput', () => {
   it ('has button SHORTEN', () => {
 
   })
-
-
 });
