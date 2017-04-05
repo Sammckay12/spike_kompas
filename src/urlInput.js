@@ -21,6 +21,10 @@ export default class UrlInput extends Component{
     })
   }
 
+  onPress = () => {
+    console.log('on press')
+      this.props.onPress(this.state.inputValue)
+    }
 
 
 
