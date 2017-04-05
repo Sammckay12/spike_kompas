@@ -41,6 +41,12 @@ export default class ShortenerContainer extends Component {
     this.shortenUrl(url)
   }
 
+  renderShortenedUrl = () => {
+    return this.state.shortenedUrl ? (
+      <a href={this.state.shortenedUrl} class="shortUrlResponse" url>{this.state.shortenedUrl}</a>
+    ) : null
+  }
+
 
   render() {
     return (
@@ -50,6 +56,7 @@ export default class ShortenerContainer extends Component {
           <h2>Welcome to React</h2>
         </div>
               <UrlInput onPress={this.onPress} />
+              {this.renderShortenedUrl()}
       </div>
     );
   }
