@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import { Grid, Row, Col } from 'react-bootstrap';
 import UrlInput from './urlInput'
+import './App.css';
 
 export default class ShortenerContainer extends Component {
 
-  constructor (props) {
-    super(props)
-    this.state = {}
-  }
+ constructor (props) {
+   super(props)
+   this.state = {}
+ }
 
   shortenUrl = (url: string) => {
     fetch('http://localhost:8081/api/shorten/', {
@@ -36,7 +37,6 @@ export default class ShortenerContainer extends Component {
     });
   }
 
-
   onPress = (url: string) => {
     this.shortenUrl(url)
   }
@@ -47,7 +47,6 @@ export default class ShortenerContainer extends Component {
     ) : null
   }
 
-
   render() {
     return (
       <div className="App">
@@ -55,10 +54,17 @@ export default class ShortenerContainer extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
+        <Grid>
+          <Row>
+            <Col xs={4} xsOffset={0}>
               <UrlInput onPress={this.onPress} />
+            </Col>
+            <Col xs={2} xsOffset={0}>
               {this.renderShortenedUrl()}
+            </Col>
+          </Row>
+        </Grid>
       </div>
     );
   }
-
-};
+}
