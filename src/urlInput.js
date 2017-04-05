@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Button, FormGroup, FormControl  } from 'react-bootstrap';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 import './App.css';
+import Flexbox from 'flexbox-react';
 
 const LINK_REGEX = /\b((?:[a-z][\w-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()[\]{};:'".,<>?«»“”‘’]))/igm
 
@@ -62,8 +63,8 @@ state: {
   render () {
     return (
       <Grid className="show-grid">
-        <Row>
-          <Col md={9} xs={9}>
+        <Row middle='xs'>
+          <Col xs={9} >
             <form className="Input-form">
               <FormGroup bsSize="large" >
                 <FormControl onChange={this.onInputChange} bsClass="Shorten-input-field" type="text" placeholder="Enter Url" />

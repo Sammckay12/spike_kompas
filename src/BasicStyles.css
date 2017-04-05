@@ -1,0 +1,27 @@
+.Primary-button {
+  background-color: #15CDF6;
+  padding: 10px 20px 10px 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1;
+  border-radius: 4px;
+}
+
+.Shorten-input-field {
+  background-color: #FFF;
+  padding: 10px 20px 10px 20px;
+  font-size: 14px;
+  border: 1;
+  border-color: #E6E6E6;
+  border-radius: 4px;
+}
+
+.Input-form {
+  float: left;
+}
+
+.show-grid{
+  display: flex;
+  justify-content: center;
+}

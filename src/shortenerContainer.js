@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import UrlInput from './urlInput'
+import Flexbox from 'flexbox-react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
+import './BasicStyles.css'
+
 
 export default class ShortenerContainer extends Component {
 
@@ -50,14 +54,20 @@ export default class ShortenerContainer extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
+      <Grid fluid>
+
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-              <UrlInput onPress={this.onPress} />
-              {this.renderShortenedUrl()}
-      </div>
+          <Row center='xs'>
+            <h2>Spike - url shortener</h2>
+          </Row>
+          <Row center='xs'>
+            <Col xs={9} >
+                <UrlInput onPress={this.onPress} />
+                {this.renderShortenedUrl()}
+            </Col>
+          </Row>
+        </Grid>
+
     );
   }
 
