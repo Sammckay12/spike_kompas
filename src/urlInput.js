@@ -7,6 +7,23 @@ import './App.css';
 
 export default class UrlInput extends Component{
 
+  constructor (props) {
+    super(props)
+    this.state = {
+      inputValue: '',
+    }
+  }
+
+  onInputChange = (event) => {
+      console.log( event.target.value)
+    this.setState({
+      inputValue: event.target.value,
+    })
+  }
+
+
+
+
   render () {
     return (
       <Grid className="show-grid">
