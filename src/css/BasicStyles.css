@@ -48,10 +48,18 @@
 }
 
 .header {
-  padding: 60px;
+  padding: 50px;
   color: #FFF;
   font-family: monospace;;
   font-size: 40px;
+}
+
+.tag-line{
+  color: #FFF;
+  font-family: monospace;;
+  font-size: 20px;
+  font-style: italic;
+  height: 100px;
 }
 
 .shortenedUrlContainer {
