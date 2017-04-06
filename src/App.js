@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
-import ShortenerContainer from './shortenerContainer'
+import './css/App.css';
+import ShortenerContainer from './components/shortenerContainer'
 
 class App extends Component {
   render() {

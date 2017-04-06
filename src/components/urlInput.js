@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Button, FormGroup, FormControl  } from 'react-bootstrap';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-import './App.css';
+import '../css/App.css';
 import Flexbox from 'flexbox-react';
 
 export default class UrlInput extends Component{

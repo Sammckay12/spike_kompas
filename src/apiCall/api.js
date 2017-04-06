@@ -1,4 +1,3 @@
-// @flow
 
 export const shortenUrl = (url: string) => {
   return new Promise((resolve, reject) => {
