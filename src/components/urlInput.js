@@ -11,6 +11,7 @@ export default class UrlInput extends Component{
     onPress: () => void,
     onInputChange: () => void,
   }
+
   render () {
     const inputStyle = this.props.invalid ? "Shorten-input-field input-invalid" : "Shorten-input-field"
     return (
