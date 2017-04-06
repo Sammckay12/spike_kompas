@@ -14,7 +14,8 @@
     "jest": "^19.0.2",
     "react-scripts": "0.9.5",
     "eslint-plugin-flowtype" : "^2.18.2",
-    "flow-bin": "0.42.0"
+    "flow-bin": "0.42.0",
+    "react-test-renderer": "*"
   },
   "scripts": {
     "start": "react-scripts start",
