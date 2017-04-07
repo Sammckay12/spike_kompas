@@ -1,7 +1,7 @@
 
 export const shortenUrl = (url: string) => {
   return new Promise((resolve, reject) => {
-    fetch('https://spky.herokuapp.com/api/shorten/', {
+    fetch('https://node-spikely.herokuapp.com/api/shorten/', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
