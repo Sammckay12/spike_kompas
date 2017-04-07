@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ShortenerContainer from './shortenerContainer';
 import renderer from 'react-test-renderer';
-jest.mock('../__mocks__/api');
+jest.mock('../apiCall/api');
 
 describe('Shortener Container', () => {
   it ('renders without crashing', () => {
@@ -33,6 +33,6 @@ describe('Shortener Container', () => {
     })
     await shortenerContainer.onPressSubmit()
     console.log('valid url: ', shortenerContainer.state)
-    expect(shortenerContainer.state.shortenedUrl).toBe('https://node-spikely.herokuapp.com/d')
+    expect(shortenerContainer.state.shortenedUrl).toBe('test.url')
   })
 });
