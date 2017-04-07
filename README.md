@@ -65,4 +65,4 @@ https://github.com/Sammckay12/url_shortener_test
 - Run 'npm install' in project root directory
 - Run 'npm start' to run the local server
 
-Or experience online directly at [Heroku](https://vast-earth-43716.herokuapp.com/)  
+Or experience online directly on [Heroku](https://vast-earth-43716.herokuapp.com/)  
