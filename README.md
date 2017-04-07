@@ -7,7 +7,7 @@
 - Manage your links
 - Paste into the URL Shortener to generate short link
 - Short / long link pairs are stored in a mongoDB database
-- Reat built to prevent re-rendering of page
+- React built to prevent re-rendering of page
 
 ## User Stories
 
