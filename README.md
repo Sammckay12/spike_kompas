@@ -57,7 +57,7 @@ Full MERN stack:
 
 Deployed to [Heroku](https://vast-earth-43716.herokuapp.com/)  
 
-This is the React (front-end) repository. To see how the Node server check out this repo:
+This is the React (front-end) repository. To see the Node server check out this repo:
 https://github.com/Sammckay12/url_shortener_test
 
 ## Installation and Usage
