@@ -63,11 +63,13 @@ https://github.com/Sammckay12/url_shortener_test
 ## Installation and Usage
 
 - Clone this repo
-- Run 'npm install' in project root directory
-- Run 'npm start' to run the local server
+- Run `npm install` in project root directory
+- Run `npm start` to run the local server
 
 - Clone https://github.com/Sammckay12/url_shortener_test
-- Run 'npm install' in project root directory
-- Run 'npm start' to run the local server
+- Run `npm install` in project root directory
+- Run `npm start` to run the local server
+
+- Run `npm test` to run the testing suite
 
 Or experience online directly on [Heroku](https://vast-earth-43716.herokuapp.com/)  
