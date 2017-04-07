@@ -20,7 +20,7 @@ export default class UrlInput extends Component{
           <Col xs={9} md={9} lg={9} className="clearPad" >
             <form>
               <FormGroup bsSize="large" >
-                <FormControl onChange={this.props.onInputChange} bsClass={inputStyle} type="text" placeholder="Enter Url" />
+                <FormControl onChange={this.props.onInputChange} bsClass={inputStyle} type="text" placeholder="Enter URL" />
               </FormGroup>
             </form>
           </Col>
