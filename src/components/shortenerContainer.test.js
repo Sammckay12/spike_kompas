@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ShortenerContainer from './shortenerContainer';
 import renderer from 'react-test-renderer';
-jest.mock('./api');
+jest.mock('../__mocks__/api');
 
 describe('Shortener Container', () => {
   it ('renders without crashing', () => {

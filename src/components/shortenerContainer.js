@@ -75,7 +75,7 @@ export default class ShortenerContainer extends Component {
               <h2>Spike.ly</h2>
             </Row>
             <Row center='xs' className="tag-line">
-              <h5>exactly the same, just smaller..</h5>
+              <h5>exactly the same, just smaller...</h5>
             </Row>
             <Row center='xs' className="row1">
               <Col xs={12} md={12} lg={12} >
