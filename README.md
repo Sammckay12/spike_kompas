@@ -1,4 +1,4 @@
-# [Spike.ly] (https://vast-earth-43716.herokuapp.com/)
+# [Spike.ly](https://vast-earth-43716.herokuapp.com/)
 
 ### Managing your links since 2017
 
