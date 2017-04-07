@@ -11,6 +11,9 @@
 
 ![Imgur](http://imgur.com/a/uikeN.png)
 
+**Mainpage with links added**
+![p1](http://imgur.com/a/uikeN.png)
+
 ## User Stories
 
 ```
