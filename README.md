@@ -9,10 +9,10 @@
 - Short / long link pairs are stored in a mongoDB database
 - React built to prevent re-rendering of page
 
-![Imgur](http://imgur.com/a/uikeN.png)
 
-**Mainpage with links added**
-![p1](http://imgur.com/a/uikeN.png)
+## Main Page
+
+![p1](http://i.imgur.com/OOahvQb.jpg)
 
 ## User Stories
 
