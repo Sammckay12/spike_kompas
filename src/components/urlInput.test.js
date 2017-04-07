@@ -9,7 +9,4 @@ describe('UrlInput', () => {
     expect(urlInput).toExist
   })
 
-  it ('has button SHORTEN', () => {
-
-  })
 });

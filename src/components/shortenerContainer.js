@@ -24,7 +24,6 @@ export default class ShortenerContainer extends Component {
     if (this.state.inputValue.match(LINK_REGEX)) {
       try {
         const response = await shortenUrl(this.state.inputValue)
-        console.log('response: ', response)
         this.setState({
           shortenedUrl: response.shortenedUrl,
         })
@@ -55,7 +54,7 @@ export default class ShortenerContainer extends Component {
   renderShortenedUrl = () => {
     return this.state.shortenedUrl && !this.state.invalidUrl ? (
       <div className="shortenedUrlContainer">
-        <a href={this.state.shortenedUrl} className="shortUrlResponse" url>{this.state.shortenedUrl}</a>
+        <a href={this.state.shortenedUrl} className="shortUrlResponse" >{this.state.shortenedUrl}</a>
       </div>
     ) : null
   }

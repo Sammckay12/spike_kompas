@@ -12,14 +12,12 @@ export const shortenUrl = (url: string) => {
       })
     })
     .then((response) => {
-      console.log(response);
       return response.json()
     })
     .then((responseJson) => {
       resolve({
         shortenedUrl: responseJson.shortUrl,
       })
-      console.log(responseJson);
     })
     .catch((error) => {
       reject(error)

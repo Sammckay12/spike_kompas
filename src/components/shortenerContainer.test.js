@@ -33,6 +33,6 @@ describe('Shortener Container', () => {
     })
     await shortenerContainer.onPressSubmit()
     console.log('valid url: ', shortenerContainer.state)
-    expect(shortenerContainer.state.shortenedUrl).toBe('test.url')
+    expect(shortenerContainer.state.shortenedUrl).toBe('https://node-spikely.herokuapp.com/d')
   })
 });
